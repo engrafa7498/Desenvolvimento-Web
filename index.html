@@ -1,1007 +1,285 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#fffaf8">
+    <meta name="description" content="Conheça os serviços de beleza e estética de Ana Karoline e solicite seu agendamento.">
 
-    <title>Disk Água Andrade | Água Cristal</title>
+    <title>Ana Karoline | Beleza e Estética</title>
 
-    <meta
-        name="description"
-        content="Disk Água Andrade. Água Cristal com entrega sem cobrança de frete. Galão completo por R$ 50,00 ou água Cristal por R$ 16,00."
-    >
+    <link rel="stylesheet" href="./style.css">
 
-    <link rel="stylesheet" href="style.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet"
-    >
-
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="./script.js" defer></script>
 </head>
 
-
 <body>
-
-
-    <!-- =========================================
-         HEADER
-    ========================================== -->
-
-    <header class="header">
-
+    <header class="site-header">
         <div class="container header-content">
-
-
-            <a href="#inicio" class="logo">
-
-                <span class="logo-water">
-                    💧
-                </span>
-
-                <span>
-
-                    <strong>
-                        Disk Água
-                    </strong>
-
-                    <small>
-                        ANDRADE
-                    </small>
-
-                </span>
-
+            <a href="#inicio" class="brand">
+                <span class="brand-name">Ana Karoline</span>
+                <span class="brand-description">BELEZA &amp; ESTÉTICA</span>
             </a>
 
-
-            <nav class="nav">
-
-                <a href="#inicio">
-                    Início
-                </a>
-
-                <a href="#precos">
-                    Preços
-                </a>
-
-                <a href="#como-funciona">
-                    Como funciona
-                </a>
-
-                <a href="#localizacao">
-                    Localização
-                </a>
-
+            <nav class="main-nav">
+                <a href="#inicio">Início</a>
+                <a href="#servicos">Serviços</a>
+                <a href="#combos">Combos e valores</a>
+                <a href="#sobre">Sobre</a>
+                <a href="#agendamento">Agendamento</a>
             </nav>
 
+            <div class="header-actions">
+                <a class="instagram-link"
+                   href="https://www.instagram.com/ana_maquiadoraprofissional/"
+                   target="_blank" rel="noopener noreferrer">Instagram</a>
 
-            <a
-                href="#"
-                class="btn btn-whatsapp header-whatsapp"
-                data-whatsapp="geral"
-            >
-                WhatsApp
-            </a>
-
-
-            <button
-                class="menu-button"
-                id="menuButton"
-                aria-label="Abrir menu"
-            >
-                ☰
-            </button>
-
-
+                <a class="btn btn-primary"
+                   href="https://wa.me/5513997712897"
+                   target="_blank" rel="noopener noreferrer">
+                    Agendar pelo WhatsApp
+                </a>
+            </div>
         </div>
-
     </header>
 
-
-
     <main>
-
-
-        <!-- =========================================
-             HERO
-        ========================================== -->
-
         <section class="hero" id="inicio">
-
-            <div class="hero-background"></div>
-
-
             <div class="container hero-content">
-
-
                 <div class="hero-text">
+                    <span class="eyebrow">BELEZA, ELEGÂNCIA E AUTOCUIDADO</span>
 
+                    <h1>Sua beleza,<br><span>do seu jeito.</span></h1>
 
-                    <span class="tag">
-                        ÁGUA CRISTAL
-                    </span>
-
-
-                    <h1>
-
-                        Água de qualidade
-
-                        <span>
-                            na sua casa.
-                        </span>
-
-                    </h1>
-
-
-                    <p>
-
-                        Faça seu pedido de forma rápida e fácil pelo WhatsApp.
-                        Trabalhamos com água Cristal e não cobramos frete.
-
+                    <p class="hero-description">
+                        Realce sua beleza com serviços personalizados de design
+                        de sobrancelhas, extensão de cílios e maquiagem.
+                        Um cuidado especial para você se sentir ainda mais confiante.
                     </p>
 
-
-                    <div class="hero-buttons">
-
-
-                        <a
-                            href="#"
-                            class="btn btn-primary"
-                            data-whatsapp="geral"
-                        >
-                            Pedir pelo WhatsApp
+                    <div class="hero-actions">
+                        <a href="#agendamento" class="btn btn-primary">
+                            Marcar agendamento
                         </a>
 
-
-                        <a
-                            href="#precos"
-                            class="btn btn-outline"
-                        >
-                            Ver preços
+                        <a href="#servicos" class="btn btn-secondary">
+                            Conhecer serviços
                         </a>
-
-
                     </div>
 
-
-                    <div class="hero-info">
-
-
-                        <div class="info-item">
-
-                            <span>
-                                ✓
-                            </span>
-
-                            <p>
-                                Água Cristal
-                            </p>
-
-                        </div>
-
-
-                        <div class="info-item">
-
-                            <span>
-                                ✓
-                            </span>
-
-                            <p>
-                                Sem cobrança de frete
-                            </p>
-
-                        </div>
-
-
+                    <div class="hero-specialties">
+                        <span>Design de sobrancelhas</span>
+                        <span>Extensão de cílios</span>
+                        <span>Maquiagem</span>
                     </div>
-
-
                 </div>
 
-
-
-                <!-- CARD DE DESTAQUE -->
-
-                <div class="hero-card">
-
-
-                    <div class="water-drop">
-                        💧
+                <div class="hero-visual">
+                    <div class="hero-photo-frame">
+                        <img
+                            src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=1000&q=85"
+                            alt="Inspiração de beleza e maquiagem"
+                            class="hero-image">
                     </div>
 
-
-                    <span>
-                        ÁGUA CRISTAL
-                    </span>
-
-
-                    <h2>
-                        Valor da água
-                    </h2>
-
-
-                    <strong>
-
-                        R$ 16
-
-                        <small>
-                            ,00
-                        </small>
-
-                    </strong>
-
-
-                    <p>
-                        Água Cristal com entrega sem cobrança de frete.
-                    </p>
-
-
-                    <a
-                        href="#"
-                        class="btn btn-whatsapp"
-                        data-whatsapp="agua"
-                    >
-                        Pedir água
-                    </a>
-
-
+                    <div class="hero-note">
+                        <span class="hero-note-label">SEU MOMENTO</span>
+                        <span class="hero-note-title">Beleza e autoestima</span>
+                    </div>
                 </div>
-
-
             </div>
-
         </section>
 
-
-
-        <!-- =========================================
-             PREÇOS
-        ========================================== -->
-
-        <section
-            class="prices section"
-            id="precos"
-        >
-
-
+        <section class="section" id="servicos">
             <div class="container">
-
-
-                <div class="section-title">
-
-
-                    <span>
-                        ESCOLHA SUA OPÇÃO
-                    </span>
-
-
-                    <h2>
-                        Nossos preços
-                    </h2>
-
-
+                <div class="section-heading">
+                    <span class="eyebrow">NOSSOS SERVIÇOS</span>
+                    <h2>Cuidados que realçam sua beleza</h2>
                     <p>
-                        Escolha a opção que melhor atende você.
+                        Conheça os serviços disponíveis e escolha o cuidado
+                        ideal para você.
                     </p>
-
-
                 </div>
 
-
-
-                <div class="price-grid">
-
-
-                    <!-- GALÃO COMPLETO -->
-
-                    <article class="price-card">
-
-
-                        <div class="card-icon">
-                            💧
-                        </div>
-
-
-                        <span class="card-label">
-                            GALÃO COMPLETO
-                        </span>
-
-
-                        <h3>
-
-                            R$ 50
-
-                            <span>
-                                ,00
-                            </span>
-
-                        </h3>
-
-
-                        <p>
-
-                            Para quem não possui um galão vazio
-                            para realizar o pedido.
-
-                        </p>
-
-
-                        <ul>
-
-                            <li>
-                                ✓ Galão novo
-                            </li>
-
-                            <li>
-                                ✓ Água Cristal
-                            </li>
-
-                            <li>
-                                ✓ Sem cobrança de frete
-                            </li>
-
-                        </ul>
-
-
-                        <a
-                            href="#"
-                            class="btn btn-primary"
-                            data-whatsapp="completo"
-                        >
-                            Pedir galão completo
-                        </a>
-
-
-                    </article>
-
-
-
-                    <!-- VALOR DA ÁGUA -->
-
-                    <article class="price-card featured">
-
-
-                        <div class="featured-badge">
-                            MAIS ECONÔMICO
-                        </div>
-
-
-                        <div class="card-icon">
-                            💧
-                        </div>
-
-
-                        <span class="card-label">
-                            VALOR DA ÁGUA
-                        </span>
-
-
-                        <h3>
-
-                            R$ 16
-
-                            <span>
-                                ,00
-                            </span>
-
-                        </h3>
-
-
-                        <p>
-
-                            Água Cristal com entrega sem cobrança
-                            de frete.
-
-                        </p>
-
-
-                        <ul>
-
-                            <li>
-                                ✓ Água Cristal
-                            </li>
-
-                            <li>
-                                ✓ Pedido pelo WhatsApp
-                            </li>
-
-                            <li>
-                                ✓ Sem cobrança de frete
-                            </li>
-
-                        </ul>
-
-
-                        <a
-                            href="#"
-                            class="btn btn-whatsapp"
-                            data-whatsapp="agua"
-                        >
-                            Pedir água
-                        </a>
-
-
-                    </article>
-
-
-                </div>
-
-
-            </div>
-
-
-        </section>
-
-
-
-        <!-- =========================================
-             COMO FUNCIONA
-        ========================================== -->
-
-        <section
-            class="how section"
-            id="como-funciona"
-        >
-
-
-            <div class="container">
-
-
-                <div class="section-title">
-
-
-                    <span>
-                        SIMPLES E RÁPIDO
-                    </span>
-
-
-                    <h2>
-                        Como funciona?
-                    </h2>
-
-
-                </div>
-
-
-
-                <div class="steps">
-
-
-                    <div class="step">
-
-
-                        <div class="step-number">
-                            01
-                        </div>
-
-
-                        <h3>
-                            Escolha sua opção
-                        </h3>
-
-
-                        <p>
-
-                            Escolha entre um galão completo
-                            ou água Cristal pelo valor da água.
-
-                        </p>
-
-
-                    </div>
-
-
-
-                    <div class="step">
-
-
-                        <div class="step-number">
-                            02
-                        </div>
-
-
-                        <h3>
-                            Faça seu pedido
-                        </h3>
-
-
-                        <p>
-
-                            Clique no botão do WhatsApp e
-                            fale diretamente conosco.
-
-                        </p>
-
-
-                    </div>
-
-
-
-                    <div class="step">
-
-
-                        <div class="step-number">
-                            03
-                        </div>
-
-
-                        <h3>
-                            Receba seu pedido
-                        </h3>
-
-
-                        <p>
-
-                            Seu pedido é realizado de forma
-                            prática e sem cobrança de frete.
-
-                        </p>
-
-
-                    </div>
-
-
-                </div>
-
-
-            </div>
-
-
-        </section>
-
-
-
-        <!-- =========================================
-             PRODUTO
-        ========================================== -->
-
-        <section class="product section">
-
-
-            <div class="container product-content">
-
-
-                <div class="product-image">
-
-
-                    <div class="bottle-placeholder">
-
-
-                        <span>
-                            💧
-                        </span>
-
-
-                        <strong>
-                            CRISTAL
-                        </strong>
-
-
-                        <small>
-                            ÁGUA MINERAL
-                        </small>
-
-
-                    </div>
-
-
-                </div>
-
-
-
-                <div class="product-text">
-
-
-                    <span>
-                        NOSSO PRODUTO
-                    </span>
-
-
-                    <h2>
-                        Água Cristal
-                    </h2>
-
-
-                    <p>
-
-                        Trabalhamos com água Cristal,
-                        oferecendo praticidade para você fazer
-                        seu pedido de maneira simples e rápida.
-
-                    </p>
-
-
-                    <div class="product-benefits">
-
-
-                        <div>
-
-                            <strong>
-                                ✓
-                            </strong>
-
-                            <span>
-                                Água Cristal
-                            </span>
-
-                        </div>
-
-
-                        <div>
-
-                            <strong>
-                                ✓
-                            </strong>
-
-                            <span>
-                                Pedido pelo WhatsApp
-                            </span>
-
-                        </div>
-
-
-                        <div>
-
-                            <strong>
-                                ✓
-                            </strong>
-
-                            <span>
-                                Sem cobrança de frete
-                            </span>
-
-                        </div>
-
-
-                    </div>
-
-
-                    <a
-                        href="#"
-                        class="btn btn-primary"
-                        data-whatsapp="geral"
-                    >
-                        Fazer meu pedido
-                    </a>
-
-
-                </div>
-
-
-            </div>
-
-
-        </section>
-
-
-
-        <!-- =========================================
-             LOCALIZAÇÃO
-        ========================================== -->
-
-        <section
-            class="location section"
-            id="localizacao"
-        >
-
-
-            <div class="container">
-
-
-                <div class="section-title">
-
-
-                    <span>
-                        ONDE ESTAMOS
-                    </span>
-
-
-                    <h2>
-                        Localização
-                    </h2>
-
-
-                    <p>
-                        Você também pode retirar seu pedido conosco.
-                    </p>
-
-
-                </div>
-
-
-
-                <div class="location-card">
-
-
-                    <div class="location-info">
-
-
-                        <div class="location-icon">
-                            📍
-                        </div>
-
-
-                        <div>
-
-
-                            <h3>
-                                Disk Água Andrade
-                            </h3>
-
-
+                <div class="services-grid">
+                    <article class="service-card">
+                        <img src="./assents/imagens/sobrancelha.jpg"
+                             alt="Design de sobrancelhas"
+                             class="service-image" loading="lazy">
+
+                        <div class="service-content">
+                            <span class="service-number">01</span>
+                            <h3>Design de Sobrancelhas</h3>
                             <p>
-
-                                R. São José dos Campos, 83<br>
-
-                                Vila Aurea
-                                (Vicente de Carvalho)<br>
-
-                                Guarujá - SP
-
+                                Modelagem personalizada para valorizar o formato
+                                do rosto e realçar a expressão natural do olhar.
                             </p>
-
-
-                            <a
-                                href="https://maps.app.goo.gl/5wChJmHDWE4okMnu8"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="btn btn-primary"
-                            >
-                                Ver no Google Maps
+                            <a href="#agendamento" class="service-link"
+                               data-select-service="Design de Sobrancelhas">
+                                Marcar agendamento →
                             </a>
-
-
                         </div>
+                    </article>
 
+                    <article class="service-card">
+                        <img src="./assents/imagens/cilios%202.jpg"
+                             alt="Extensão de cílios"
+                             class="service-image" loading="lazy">
 
-                    </div>
+                        <div class="service-content">
+                            <span class="service-number">02</span>
+                            <h3>Extensão de Cílios</h3>
+                            <p>
+                                Técnicas para realçar o olhar, com opções
+                                personalizadas conforme o resultado desejado.
+                            </p>
+                            <a href="#agendamento" class="service-link"
+                               data-select-service="Extensão de Cílios">
+                                Marcar agendamento →
+                            </a>
+                        </div>
+                    </article>
 
+                    <article class="service-card">
+                        <img
+                            src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=800&q=85"
+                            alt="Produtos de maquiagem"
+                            class="service-image" loading="lazy">
 
+                        <div class="service-content">
+                            <span class="service-number">03</span>
+                            <h3>Maquiagem</h3>
+                            <p>
+                                Produções personalizadas para ocasiões especiais,
+                                respeitando seu estilo e suas preferências.
+                            </p>
+                            <a href="#agendamento" class="service-link"
+                               data-select-service="Maquiagem">
+                                Marcar agendamento →
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
 
-                    <div class="map-placeholder">
-
-
-                        <span>
-                            📍
-                        </span>
-
-
-                        <p>
-                            Nossa localização
-                        </p>
-
-
-                        <a
-                            href="https://maps.app.goo.gl/5wChJmHDWE4okMnu8"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            Abrir no Google Maps →
-                        </a>
-
-
-                    </div>
-
-
+        <section class="section combos-section" id="combos">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="eyebrow">COMBOS ESPECIAIS</span>
+                    <h2>Sua beleza em cada detalhe</h2>
+                    <p>
+                        Confira os combos disponíveis e consulte os valores
+                        atualizados no catálogo.
+                    </p>
                 </div>
 
-
+                <div class="services-grid" id="combos-list">
+                    <p class="loading-message">Carregando combos...</p>
+                </div>
             </div>
-
-
         </section>
 
-
-
-        <!-- =========================================
-             CTA FINAL
-        ========================================== -->
-
-        <section class="final-cta">
-
-
-            <div class="container">
-
-
-                <span>
-                    DISK ÁGUA ANDRADE
-                </span>
-
-
-                <h2>
-
-                    Precisa de água?
-
-                    <br>
-
-                    Faça seu pedido agora.
-
-                </h2>
-
-
+        <section class="section about-section" id="sobre">
+            <div class="container about-content">
+                <span class="eyebrow">SOBRE O ATENDIMENTO</span>
+                <h2>Um cuidado especial para você</h2>
                 <p>
-                    Fale conosco pelo WhatsApp.
+                    Atendimento personalizado para valorizar sua beleza,
+                    respeitando suas preferências e seu estilo.
                 </p>
-
-
-                <a
-                    href="#"
-                    class="btn btn-light"
-                    data-whatsapp="geral"
-                >
-                    Pedir pelo WhatsApp
+                <a class="text-link"
+                   href="https://www.instagram.com/ana_maquiadoraprofissional/"
+                   target="_blank" rel="noopener noreferrer">
+                    Conheça o trabalho no Instagram →
                 </a>
-
-
             </div>
-
-
         </section>
 
+        <section class="section booking-section" id="agendamento">
+            <div class="container booking-container">
+                <div class="section-heading">
+                    <span class="eyebrow">AGENDE SEU HORÁRIO</span>
+                    <h2>Seu momento de autocuidado começa aqui</h2>
+                    <p>
+                        Preencha seus dados e escolha o serviço, a data e o
+                        horário desejados. A solicitação será encaminhada à Ana
+                        para verificar a disponibilidade.
+                    </p>
+                </div>
 
+                <form id="booking-form" class="booking-form">
+                    <div class="form-field">
+                        <label for="client-name">Nome completo</label>
+                        <input id="client-name" name="client_name"
+                               type="text" autocomplete="name"
+                               placeholder="Digite seu nome completo" required>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="client-phone">WhatsApp com DDD</label>
+                        <input id="client-phone" name="client_phone"
+                               type="tel" autocomplete="tel"
+                               placeholder="Ex.: (13) 99999-9999" required>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="service-select">Serviço ou combo</label>
+                        <select id="service-select" name="service_id" required>
+                            <option value="">Carregando serviços...</option>
+                        </select>
+                    </div>
+
+                    <div id="selected-service-info" class="selected-service-info"
+                         aria-live="polite">
+                        Selecione um serviço para consultar o valor e a duração.
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-field">
+                            <label for="booking-date">Data desejada</label>
+                            <input id="booking-date" name="booking_date"
+                                   type="date" required>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="booking-time">Horário desejado</label>
+                            <input id="booking-time" name="booking_time"
+                                   type="time" required>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary booking-submit" type="submit">
+                        Solicitar agendamento
+                    </button>
+
+                    <p id="booking-message" class="booking-message"
+                       role="status" aria-live="polite"></p>
+
+                    <p class="form-disclaimer">
+                        O envio é uma solicitação, não uma confirmação automática.
+                        A Ana verificará a disponibilidade e combinará os detalhes
+                        pelo WhatsApp.
+                    </p>
+                </form>
+            </div>
+        </section>
     </main>
 
-
-
-    <!-- =========================================
-         FOOTER
-    ========================================== -->
-
-    <footer class="footer">
-
-
+    <footer class="site-footer">
         <div class="container footer-content">
+            <a href="#inicio" class="footer-brand">Ana Karoline</a>
 
-
-            <div class="footer-brand">
-
-
-                <div class="logo">
-
-
-                    <span class="logo-water">
-                        💧
-                    </span>
-
-
-                    <span>
-
-                        <strong>
-                            Disk Água
-                        </strong>
-
-                        <small>
-                            ANDRADE
-                        </small>
-
-                    </span>
-
-
-                </div>
-
-
-                <p>
-                    Água Cristal para sua casa.
-                </p>
-
-
+            <div class="footer-links">
+                <a href="https://www.instagram.com/ana_maquiadoraprofissional/"
+                   target="_blank" rel="noopener noreferrer">Instagram</a>
+                <a href="https://wa.me/5513997712897"
+                   target="_blank" rel="noopener noreferrer">WhatsApp</a>
             </div>
 
-
-
-            <div class="footer-contact">
-
-
-                <strong>
-                    Fale conosco
-                </strong>
-
-
-                <a
-                    href="#"
-                    data-whatsapp="geral"
-                >
-                    WhatsApp
-                </a>
-
-
-                <span>
-                    (13) 97402-1504
-                </span>
-
-
-            </div>
-
-
-
-            <div class="footer-location">
-
-
-                <strong>
-                    Retirada
-                </strong>
-
-
-                <span>
-                    R. São José dos Campos, 83
-                </span>
-
-
-                <span>
-                    Vila Aurea - Guarujá/SP
-                </span>
-
-
-            </div>
-
-
+            <p class="footer-credit">Desenvolvido por Rafael Magalhães</p>
         </div>
-
-
-
-        <!-- RODAPÉ INFERIOR -->
-
-        <div class="footer-bottom">
-
-
-            <div class="container">
-
-
-                <p>
-                    © 2026 Disk Água Andrade. Todos os direitos reservados.
-                </p>
-
-
-                <p class="site-author">
-
-                    Site desenvolvido por
-
-                    <strong>
-                        Rafael Magalhães
-                    </strong>.
-
-                </p>
-
-
-            </div>
-
-
-        </div>
-
-
     </footer>
-
-
-
-    <!-- =========================================
-         BOTÃO FLUTUANTE WHATSAPP
-    ========================================== -->
-
-    <a
-        href="#"
-        class="whatsapp-float"
-        data-whatsapp="geral"
-        aria-label="Falar pelo WhatsApp"
-    >
-
-        <span>
-            ☏
-        </span>
-
-    </a>
-
-
-
-    <script src="script.js"></script>
-
-
 </body>
-
 </html>
